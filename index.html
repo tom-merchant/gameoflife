@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Conway's Game of life</title>
+<script src="gameoflife.js"></script>
+</head>
+
+<body>
+	<canvas id="cnv" width="1112px" height="1112px" oncontextmenu="return false;"></canvas>
+
+	<br />
+	<label for="speed">Simulation Speed(Hz): </label>
+	<input type="number" name="" value="10" id="speed", min="0", max="60">
+	<br />
+ 		<button onclick="begin()">Start</button>
+    <button onclick="resetGame()">Reset</button>
+    <button onclick="clearGrid()">Clear</button>
+    <br />
+		<!--<button onclick="saveState()">Save</button>
+		<input type="text" id=outbox maxlength="30000" value="">
+		<br />
+		<input type="text" id="inbox" maxlength="30000" value="">
+		<button onclick="loadState()">Load</button>
+		<br />-->
+		<input type="checkbox" id="placebp">Place blueprint</input>
+		<select id="bp">
+			<option value="3,3,001101011">Glider</option>
+			<option value="36,9,000000000000000000000000100000000000000000000000000000000010100000000000000000000000110000001100000000000011000000000001000100001100000000000011110000000010000010001100000000000000110000000010001011000010100000000000000000000010000010000000100000000000000000000001000100000000000000000000000000000000110000000000000000000000">Glider gun</option>
+		</select>
+		<br />
+    <input type="checkbox" id="showgrid" checked="checked">Show Grid</input>
+
+    <script>init();</script>
+</body>
+</html>
